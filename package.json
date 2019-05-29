@@ -1,0 +1,25 @@
+{
+  "name": "leaning_javascript",
+  "version": "1.0.0",
+  "description": "= Learning JavaScript, 3rd Edition\r == Chapter 2: Javascript Development Tools",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/seongjin571/Learning_Javascript.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/seongjin571/Learning_Javascript/issues"
+  },
+  "homepage": "https://github.com/seongjin571/Learning_Javascript#readme",
+  "dependencies": {
+    "underscore": "^1.9.1"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  }
+}
