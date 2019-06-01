@@ -1,4 +1,3 @@
-// "use strict";
 let globalFunc;
 {
     const blockVar = "a";
@@ -8,10 +7,31 @@ let globalFunc;
 }
 globalFunc();
 
+// {
+//     const blockVar = "b";
+//     const blockFunc = function(){
+//         console.log(blockVar);
+//     }
+// }
+// blockFunc();
+
+let f;
 {
-    const blockVar = "b";
-    const blockFunc = function(){
-        console.log(blockVar);
+    let o = {note : 'Safe'}
+    f = function(){
+        return o;
     }
 }
-blockFunc();
+let oRef = f();
+console.log(oRef.note);
+oRef.note = "Not so safe after all!";
+console.log(oRef.note);
+
+const f2 = (function(){
+    let count = 0;
+    return function(){
+        return `I have been called ${++count} time(s)`;
+    }
+})();
+f2();
+f2();
