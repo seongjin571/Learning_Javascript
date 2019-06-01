@@ -1,3 +1,4 @@
+
 const testFunc = name => name;
 console.log(testFunc("한성진"));
 
@@ -31,26 +32,23 @@ const o2 = {
 }
 console.log(o2.getBackWards());
 
-
-const o3 = {
-    name : 'Sungjin',
-    getBackWards : function(){
-        function getReversName(){
-            let nameBackwards ='';
-            for(let i = this.name.length-1; i>=0; i--)
-                nameBackwards += this.name[i];
-            return nameBackwards;
-        }
-    return `${getReversName()} si ym ,olleH`;
-    },
-}
-
 const seongjin = {name : "Seungjin"};
 const friend = {name : "friend"};
 
-o3.getBackWards.call(seongjin);
-// function greet(){
-//     return `Hello, I'm ${this.name}!`;
-// }
+function greet(age, height){
+    this.age = age;
+    this.height = height;
+    return `${this.name} is ${this.age} years old and he's height is ${this.height}`;
+}
 
+console.log(greet.call(seongjin,27,176));
+console.log(seongjin);
+
+function insertInfo(age, height){
+    this.age = age;
+    this.height = height;
+    return `${this.name} is ${this.age} years old and he's height is ${this.height}`;
+}
+console.log(insertInfo.apply(friend, [26,173]));
+console.log(friend);
 
