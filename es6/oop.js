@@ -20,3 +20,4 @@ const o2 = { x2: 1, x3: 2, f2: 4, xle: 5};
 Object.keys(o2).filter(e => e.match(/^x/)).forEach(v => {
     console.log(`${v} : ${o2[v]}`);
 });
+ 
